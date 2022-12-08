@@ -1,0 +1,150 @@
+:root {
+  --clr-primary-violet: hsl(263, 55%, 52%);
+  --clr-primary-dark-grayish-blue: hsl(217, 19%, 35%);
+  --clr-primary-dark-blackish-blue: hsl(219, 29%, 14%);
+  --clr-primary-white: hsl(0, 0%, 100%);
+  --clr-neutral-light-gray: hsl(0, 0%, 75%);
+  --clr-neutral-light-grayish-blue: hsl(210, 46%, 95%);
+
+  --fs-name: 1rem;
+
+  --padding-testmon: 2rem;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+/* GLOBALS */
+
+.profile-pic {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--clr-primary-white);
+}
+
+.name {
+  font-size: var(--fs-name);
+  font-weight: 500;
+  color: var(--clr-neutral-light-grayish-blue);
+}
+
+.role {
+  font-size: 0.7rem;
+  color: var(--clr-neutral-light-gray);
+}
+
+.bold-intro {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--clr-primary-white);
+}
+
+.some_text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-neutral-light-gray);
+}
+
+.testimonial {
+  border-radius: 10px;
+  padding: var(--padding-testmon);
+  /* min-width: 100%; */
+}
+
+/* Styles */
+
+.container {
+  margin: 5rem auto;
+  border-radius: 10px;
+  width: 80%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "one one one two five"
+    "three four four four five";
+  gap: 1rem;
+}
+
+@media (max-width: 676px) {
+  .grid-container {
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+    gap: 1rem;
+  }
+}
+
+.testimonial__header {
+  display: flex;
+  gap: 0.875rem;
+}
+.testimonial__text {
+  padding-top: 0.875rem;
+}
+
+.bold-intro {
+  padding-bottom: 0.875rem;
+}
+
+.testimonial-1 {
+  background-color: var(--clr-primary-violet);
+  grid-area: one;
+}
+
+.testimonial-2 {
+  background-color: var(--clr-primary-dark-grayish-blue);
+  grid-area: two;
+}
+
+.testimonial-3 {
+  grid-area: three;
+}
+
+.testimonial-4 {
+  background-color: var(--clr-primary-dark-blackish-blue);
+  grid-area: four;
+}
+
+.testimonial-5 {
+  grid-area: five;
+}
+
+.testimonial-3,
+.testimonial-5 {
+  background-color: var(--clr-neutral-light-grayish-blue);
+}
+
+.testimonial-3 .name,
+.testimonial-5 .name {
+  color: var(--clr-primary-dark-blackish-blue) !important;
+}
+
+.testimonial-3 .role,
+.testimonial-5 .role {
+  color: var(--clr-primary-dark-grayish-blue-blue) !important;
+}
+
+.testimonial-3 .bold-intro,
+.testimonial-5 .bold-intro {
+  color: var(--clr-primary-dark-blackish-blue) !important;
+}
+
+.testimonial-3 .some_text,
+.testimonial-5 .some_text {
+  color: var(--clr-primary-dark-grayish-blue) !important;
+}
