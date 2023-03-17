@@ -31,7 +31,7 @@ img {
 }
 
 .qr-code {
-  max-width: 60vw;
+  width: 350px;
   border-radius: 15px;
   background-color: var(--clr-white);
   padding: 25px;
@@ -40,7 +40,7 @@ img {
 
 @media (max-width: 767px) {
   .qr-code {
-      max-width: 30vw;
+      max-width: 250px;
     }
 }
 
