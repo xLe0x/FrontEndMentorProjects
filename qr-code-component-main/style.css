@@ -31,11 +31,17 @@ img {
 }
 
 .qr-code {
-  width: 340px;
+  max-width: 60vw;
   border-radius: 15px;
   background-color: var(--clr-white);
   padding: 25px;
   box-shadow: 0 0 50px 5px var(--clr-grayish-blue);
+}
+
+@media (max-width: 767px) {
+  .qr-code {
+      max-width: 30vw;
+    }
 }
 
 .qr-code .image img {
